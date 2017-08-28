@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  <title>MPD</title>
+</head>
+
+<body>
+   <center><img src='http://localhost:8080/static/recorder.png' alt='MPD' /></center>
+   {% if error %}
+      <p class="row"><div class="col-md-2">
+        <a href="/" class="btn btn-block btn-lg btn-warning" role="button">{{ error }}</a>
+      </div></p>
+   {% endif %}
+   {% if recording == true %}
+      <p class="row"><div class="col-md-2">
+        <a href="/" class="btn btn-block btn-lg btn-danger" role="button">RECORDING</a>
+      </div></p>
+   {% else %}
+      <p class="row"><div class="col-md-2">
+        <a href="/record/30" class="btn btn-block btn-lg btn-primary" role="button">30s</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/60" class="btn btn-block btn-lg btn-primary" role="button">1m</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/300" class="btn btn-block btn-lg btn-primary" role="button">5m</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/600" class="btn btn-block btn-lg btn-primary" role="button">10m</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/900" class="btn btn-block btn-lg btn-primary" role="button">15m</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/1800" class="btn btn-block btn-lg btn-primary" role="button">30m</a>
+      </div></p>
+      <p class="row"><div class="col-md-2">
+        <a href="/record/3600" class="btn btn-block btn-lg btn-primary" role="button">1h</a>
+      </div></p>
+   {% endif %}
+</body>
+</html>
