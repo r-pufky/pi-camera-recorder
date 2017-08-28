@@ -8,7 +8,8 @@ Install Instructions
 1. Login raspberry pi, install dependencies and clone code
 
 ```bash
-sudo apt install python-picamera python3-picamera python-picamera-docs python-dev python-imaging python-pip python-flask  flask
+sudo apt install python-picamera python3-picamera python-picamera-docs python-dev python-imaging python-pip python-flask flask
+sudo apt update && sudo apt upgrade
 git clone https://github.com/r-pufky/pi-camera-recorder
 ```
 
