@@ -23,4 +23,4 @@ Usage:
 ------
 Run recorder.py and access interface via http://localhost:8080. Recordings will be saved to recordings/.
 
-This should probably be turned into a service if used more more than a demo.
+This should probably be turned into a service if used for more than a demo.
